@@ -62,7 +62,7 @@ function philaGoogleCalendarFullListWidget_handler(){
 		$currentEvent = (array)$eventArray[$eventCount];
 		$startDate = new DateTime($currentEvent['startDate']);//convert startdate string to DateTime object
 		
-		$eventString .= "<div id=\"Event$eventCount\"></div>";
+		$eventString .= "<div id=\"Event$eventCount\" class=\"phila-event-details\">";
 		$eventString .= "<div class=\"PhilaGoogleCalendarDateRow\">".date_format($startDate, 'l').", ".date_format($startDate, 'm/d/Y')."</div>"; 
 		$eventString .= "<div class=\"PhilaGoogleCalendarTitleRow\">".date_format($startDate, 'g:i A')." - ".$currentEvent['title']."</div>";
 		$eventString .= "<div class=\"PhilaGoogleCalendarContentRow\">".$currentEvent['content']."</div>";
